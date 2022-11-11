@@ -586,7 +586,6 @@ address {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 93px;
 }
 
 .logo-footer {
@@ -634,7 +633,9 @@ address {
 }
 
 /* Join */
-
+.join-footer {
+  margin-left: 70px;
+}
 .join-title-footer {
   font-weight: 700;
   line-height: calc(16 / 14);
@@ -673,6 +674,9 @@ address {
 }
 
 /* sign-up */
+.sign-up-footer {
+  margin-left: auto;
+}
 .sign-title-footer {
   font-weight: 700;
   line-height: calc(16 / 14);
@@ -684,10 +688,6 @@ address {
 .sign-up-block {
   display: flex;
   align-items: center;
-}
-
-.sign-up-email {
-  position: relative;
 }
 
 .sign-up-label {
@@ -703,7 +703,7 @@ address {
 .sign-up-input {
   width: 358px;
   height: 50px;
-  padding: 15px 15px 15px 65px;
+  padding: 15px;
   margin-right: 12px;
   font-size: 16px;
   line-height: calc(20 / 16);
@@ -751,7 +751,7 @@ address {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity 500ms linear, visibility 500ms linear;
+  transition: opacity var(--trns-hover), visibility var(--trns-hover);
 }
 
 .is-hidden {
@@ -797,6 +797,8 @@ address {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: fill var(--trns-hover);
 }
 
 .close-btn:hover .close-black {
@@ -814,6 +816,7 @@ address {
 
 .form-label {
   display: block;
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
@@ -848,6 +851,8 @@ address {
   top: 50%;
   transform: translateY(-50%);
   fill: var(--filter-btn);
+
+  transition: fill var(--trns-hover);
 }
 
 .form-input:hover + .form-icon {
@@ -866,8 +871,16 @@ address {
   margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color var(--trns-hover);
+}
+.form-textarea:hover {
+  border-color: var(--bg-btn);
 }
 
+.form-textarea:focus {
+  border-color: var(--bg-btn);
+}
 .checkbox-input {
   appearance: none;
 }
